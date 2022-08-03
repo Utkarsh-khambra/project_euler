@@ -31,7 +31,34 @@ find_package(Catch2 REQUIRED)
 
 # ---- Create library ----
 # add_executable(project_euler src/impls/tests.cpp src/impls/catch_main.cpp)
-add_executable(project_euler src/main.cpp)
+
+add_executable(project_euler 
+src/highly_divisible_triangular_number.cpp
+src/counting_sundays.cpp
+src/even_fibonacci.cpp
+src/combinatoric_selection.cpp
+src/largest_product_in_a_series.cpp
+src/largest_palindrom_product.cpp
+src/power_digit_sum.cpp
+src/square_remainder.cpp
+src/square_root_convergents.cpp
+src/square_root_digital_expansion.cpp
+src/square_free_binomial.cpp
+src/reciprocal_cycles.cpp
+src/prime_permutation.cpp
+src/prime-k-factorial.cpp
+src/ordered_radical.cpp
+src/largest_prime_factor.cpp
+src/10001st_prime.cpp
+src/consecutive_prime_sum.cpp
+src/self_powers.cpp
+src/longest_collatz_sequence.cpp
+src/sum_of_primes.cpp
+src/largest_exponential.cpp
+src/special_pythagorian_triplet.cpp
+src/triangle_containment.cpp
+)
+
 # Note: for header-only libraries change all PUBLIC flags to INTERFACE and create an interface
 # target: add_library(project_euler INTERFACE) set_target_properties(project_euler PROPERTIES
 # INTERFACE_COMPILE_FEATURES cxx_std_17)
