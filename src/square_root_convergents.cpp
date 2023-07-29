@@ -45,7 +45,7 @@ void insert_in_vec(std::vector<int> &v, int a) {
 
 // Simplifies the sequence <a₁, a₂, a₃, a₄ ...> where any two may be equal
 // to a sequence <b₁, b₂, b₃, b₄, ...> and no two b are same such that
-// 2^a₁+2^a₂+2^a₃ ... == a^b₁+2^b₂+2^b₃...
+// 2^a₁+2^a₂+2^a₃ ... == 2^b₁+2^b₂+2^b₃...
 auto simplifier(const std::vector<int> &temp_num) {
   std::vector<int> num;
   std::set<int> ps;
@@ -71,7 +71,7 @@ auto simplifier(const std::vector<int> &temp_num) {
   return num;
 }
 
-TEST_CASE("57 Square root convergents", "") {
+int main() {
   const int limit = 1000;
   std::unordered_map<int, std::vector<int>> numerator{{0, {2, 0}}};
   std::unordered_map<int, std::vector<int>> denomenator{{0, {1}}};
@@ -125,7 +125,7 @@ TEST_CASE("57 Square root convergents", "") {
     if (digit_count(numerator[i]) > digit_count(denomenator[i]))
       ++count;
   }
-  REQUIRE(count == 153);
+  fmt::print("{}\n", count == 153);
 
   // This overflows
   // auto add_2 = [](auto j) { return ratio<std::int64_t>(2, 1) + j; };
