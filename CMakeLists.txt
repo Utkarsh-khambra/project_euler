@@ -40,7 +40,8 @@ add_executable(project_euler
 # src/largest_palindrom_product.cpp
 # src/power_digit_sum.cpp
 # src/square_remainder.cpp
-src/square_root_convergents.cpp
+# src/square_root_convergents.cpp
+src/factorial_digit_sum.cpp
 # src/square_root_digital_expansion.cpp
 # src/square_free_binomial.cpp
 # src/reciprocal_cycles.cpp
